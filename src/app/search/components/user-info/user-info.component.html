@@ -1,0 +1,21 @@
+<div class="container" *ngIf="user">
+    <mat-card>
+        <mat-card-header style="margin: auto">
+            <mat-card-title>
+                <fa-icon [icon]="userGraduate"></fa-icon>
+                {{user.login}}
+            </mat-card-title>
+            <mat-card-subtitle>{{'ID: ' + user.id}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <img [src]="user.avatar_url" alt="Imagen de usuario">
+            <h3><strong>{{user.name}}</strong></h3>
+            <div *ngIf="user.bio">
+                <fa-icon [icon]="bookOpen" [spin]="true" size="3x"></fa-icon>
+                <p class="bio">{{user.bio}}</p>
+            </div>
+            <p>{{'Followers: ' + user.followers}}</p>
+            <a class="github-button" mat-button [href]="user.html_url">Profile on GitHub</a>
+        </mat-card-content>
+    </mat-card>
+</div>

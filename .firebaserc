@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "test-development-frontend": {
+      "hosting": {
+        "santiago-restrepo-villada": [
+          "test-development-frontend"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "test-development-frontend"
+  }
+}

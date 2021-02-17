@@ -1,0 +1,24 @@
+form {
+  display: flex;
+  height: 100%;
+}
+
+.mat-form-field {
+  margin: auto;
+  display: block;
+  width: 80%;
+}
+
+.fa-github {
+  font-size: 20px;
+}
+
+mat-card-actions > button {
+  margin-bottom: 10px;
+}
+
+.container-signIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

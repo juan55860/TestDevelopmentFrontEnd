@@ -1,0 +1,74 @@
+.container {
+  height: 100%;
+  width: 80%;
+  padding: 5%;
+  margin: auto;
+}
+
+.mat-form-field {
+  margin: auto;
+  display: block;
+  width: 80%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container-button {
+  display: flex;
+  align-items: center;
+}
+
+div > fa-icon {
+  margin-right: 10px;
+}
+
+.svg-inline--fa {
+  position: absolute;
+  right: 0;
+}
+
+table {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.mat-cell, .mat-footer-cell, a {
+  color: white;
+}
+
+.bar-chart {
+  width: 60%;
+  margin: auto;
+}
+
+.mat-card-actions .mat-button,
+.mat-card-actions .mat-raised-button,
+.mat-card-actions .mat-stroked-button{
+  margin: 0;
+  margin-left: 8px;
+}
+
+th.mat-header-cell:first-of-type,
+td.mat-cell:first-of-type,
+td.mat-footer-cell:first-of-type {
+  padding-right: 10px;
+}
+
+@media (min-width: 800px) {
+  table {
+    width: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .mat-cell, .mat-footer-cell {
+    font-size: 12px;
+  }
+
+  .bar-chart {
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+<form [formGroup] = "form" (ngSubmit)="signUpEmailPass($event)">
+    <mat-card>
+        <mat-card-title>Test Development Front-End</mat-card-title>
+        <mat-card-subtitle>Sign up with Email and Password</mat-card-subtitle>
+        <mat-card-content>
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput required type = "text" placeholder = "Email" formControlName = "email">
+                    <mat-error *ngIf = "form.get('email').hasError('required')">Este campo es requerido.</mat-error>
+                    <mat-error *ngIf = "form.get('email').hasError('email')">Este campo debe ser un email.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input matInput required type = "password" placeholder = "Password" formControlName = "password">
+                    <mat-error *ngIf = "form.get('password').invalid">Este campo es requerido.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput required type = "password" placeholder = "Confirm Password" formControlName = "confirmpassword">
+                    <mat-error *ngIf="form.get('password').value != form.get('confirmpassword').value && form.get('confirmpassword').value != null">La contraseña debe coincidir</mat-error>
+                </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <div class="container-signUp">
+                <fa-icon [icon]="userSecret" size="2x"></fa-icon>
+                <button [disabled]="form.invalid" mat-raised-button color="primary" type="submit">Sign up</button>
+            </div>
+            <a mat-button routerLink="/auth/sign_in">Login</a>
+        </mat-card-actions>
+    </mat-card>
+</form>
+

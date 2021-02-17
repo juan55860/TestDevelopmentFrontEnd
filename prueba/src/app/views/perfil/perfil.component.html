@@ -1,0 +1,34 @@
+<section>
+    <div class="row align-self-center">
+        <div class="busqueda col-jg-5 mx-auto w-100 px-lg-5 pt-lg-5  py-lg-4 p-4">
+            <button type="button" class="btn btn-secondary btn-lg d-block" [routerLink]="['/busqueda']">ATRAS</button>
+            <h2 class="text-light font-weight-bold text-center">{{usuario}}</h2>
+
+            <img src={{avatar}} class="rounded mx-auto d-block" alt="...">
+
+            <table class="table table-dark">
+                <tbody>
+                    <tr>
+                        <th scope="row">Usuario</th>
+                        <td>{{login}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">URL</th>
+                        <td>{{direccion}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Repositorios</th>
+                        <td>{{repos}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Seguidores</th>
+                        <td>{{followers}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</section>

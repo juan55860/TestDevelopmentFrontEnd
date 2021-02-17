@@ -1,0 +1,167 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>santiago-restrepo-villada documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">santiago-restrepo-villada documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="prueba-técnica---programador-front-end">Prueba Técnica - Programador (Front-end)</h1>
+<p>Esta prueba es para evaluar el aspirante a desarrollador <strong>Front-end Taxia Life</strong> </p>
+<h2 id="introducción">INTRODUCCIÓN</h2>
+<p>En este repositorio se encuentra una serie de requerimientos con un caso practico, que busca evaluar las capacidades técnicas del candidato con respecto a las principales funciones y responsabilidades que se requieren dentro del área de Desarrollo de Tecnología FrontEnd.</p>
+<h4 id="¿qué-se-busca-evaluar">¿Qué se busca evaluar?</h4>
+<p>Principalmente los siguientes aspectos:</p>
+<ul>
+<li>Creatividad para resolver los requerimientos,</li>
+<li>Calidad del código entregado (estructura y buenas prácticas),</li>
+<li>Eficiencia de los algoritmos entregados,</li>
+<li>Frameworks, librerias y plataformas de desarrollo Web.</li>
+</ul>
+<h2 id="importante">IMPORTANTE</h2>
+<ol>
+<li>Asegúrate de tener <code>Node.js</code> y (<code>npm</code> o <code>yarn</code>) instalados.</li>
+<li>Se requiere crear la aplicación utilizando cualquiera de las siguientes Tecnologias (Frameworks) <strong><a href="https://es.reactjs.org/">React</a></strong>, <strong><a href="https://angular.io/">Angular</a></strong> o <strong><a href="https://vuejs.org/">Vue</a></strong>.<ul>
+<li>se privilegiarán a los candidatos que utilicen <strong>Redux o Flux</strong> para <strong>React</strong>.</li>
+<li>utilizar ES6, ES7 o TypeScript.</li>
+</ul>
+</li>
+<li>Se Recomienda emplear un  máximo de <strong>5 (cinco) horas</strong> y enviar todo lo que se pueda.</li>
+<li>Se requiere de una <strong>cuenta de GitHub</strong> para realizar este ejercicio.</li>
+<li><strong>Antes de comenzar a programar:</strong><ul>
+<li>Realizar un <code>Fork</code> de este repositorio (<a href="https://github.com/CityTaxi/TestDevelopmentFrontEnd.git">https://github.com/CityTaxi/TestDevelopmentFrontEnd.git</a>).</li>
+<li>Clonar el fork a su máquina local  <code>git clone git@github.com:USERNAME/FORKED-PROJECT.git</code></li>
+<li>Crear un <code>branch</code> en su cuenta de GitHub utilizando su nombre completo.</li>
+</ul>
+</li>
+<li><strong>Al finalizar</strong>, debe entregar su trabajo realizado de la siguiente manera:<ul>
+<li>1) Realizar un <code>Commit</code> de su proyecto, <strong>enviar un <code>Pull Request</code> al branch con su NOMBRE</strong>, y notificar a la siguiente dirección de correo electrónico  <a href="mailto:juan.restrepo@citytaxiapp.com">juan.restrepo@citytaxiapp.com</a>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="ejercicio-práctico">EJERCICIO PRÁCTICO</h2>
+<p><strong>Objetivo:</strong> Crear una aplicación,  que permita loguearse, que obtenga una lista de usuarios y muestre la información de sus perfiles, utilizando el API Rest pública de GitHub <a href="https://api.github.com/search/users?q=YOUR_NAME">https://api.github.com/search/users?q=YOUR_NAME</a>.</p>
+<h4 id="requerimientos-generales">Requerimientos generales</h4>
+<ol>
+<li><p>La aplicación debe cumplir con los siguientes <strong>requisitos funcionales:</strong></p>
+<ul>
+<li><p>Crear un Formulario de login.</p>
+</li>
+<li><p>Mantener la sesion en los diferentes componentes del usuario logueado.</p>
+</li>
+<li><p>Crear un componente que incluya un campo de entrada texto y un botón, para que se pueda capturar el usuario y recuperar la información utilizando el API de GitHub anteriormente indicada.</p>
+</li>
+<li><p>Mostrar los primeros 10 usuarios del resultado de la búsqueda, incluyendo su nombre de usuario (<code>&#39;user.login&#39;</code>) y el id (<code>&#39;user.id&#39;</code>) de cada registro.</p>
+</li>
+<li><p>Convertir cada Perfil de usuario en un enlace, para que al hacer clic en cada registro, navegue a una ruta que incluya la propiedad <code>&#39;user.login&#39;</code> como parámetro.</p>
+</li>
+<li><p>Crear un componente independiente en el que se lea el parámetro de la URL, y a continuación, obtenga los datos de dicho usuario mediante la siguiente API: <a href="https://api.github.com/users/YOUR_NAME">https://api.github.com/users/YOUR_NAME</a></p>
+</li>
+<li><p>Incluir la imagen del usuario (<code>&#39;avatar_url&#39;</code>) y alguna otra información (de su elección) en el componente.</p>
+</li>
+<li><p>Incluir un validador que verifique que el texto de búsqueda de usuarios sea de un mínimo de 4 caracteres, y otro que NO permita realizar la búsqueda de la palabra <strong>&#39;TaxiaLife&#39;</strong>.</p>
+</li>
+<li><p>Integrar cualquier librería de gráficos que pueda encontrar y crear un gráfico de barras simple para mostrar el número de seguidores de los 10 primeros usuarios.</p>
+</li>
+<li><p>Incluir un componente para mostrar mensajes de Error en toda la aplicación.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>CSS:</strong> Utilizar algún framework (a elección) para escribir los archivos CSS, tomando en cuenta la compatibilidad con distintos navegadores.</p>
+</li>
+<li><p><strong>Iconos:</strong> Utilizar una librería para el manejo de iconos donde lo considere necesario (<em>se recomienda el uso de <a href="http://fontawesome.io/">Font Awesome</a> o <a href="http://glyphicons.com/">Glyphicons</a>.</em>)</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

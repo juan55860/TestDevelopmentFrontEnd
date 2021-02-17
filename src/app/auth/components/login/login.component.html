@@ -1,0 +1,29 @@
+<form [formGroup] = "form" (ngSubmit)="signInEmailPass()">
+    <mat-card>
+        <mat-card-title>Test Development Front-End</mat-card-title>
+        <mat-card-subtitle>Sign in</mat-card-subtitle>
+        <mat-card-content>
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput required type = "email" placeholder = "Email" formControlName = "email">
+                    <mat-error *ngIf = "form.get('email').hasError('email')">Debe de ser un email</mat-error>
+                    <mat-error *ngIf = "form.get('email').hasError('required')">Este campo es requerido.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input matInput required type = "password" placeholder = "Password" formControlName = "password">
+                    <mat-error *ngIf = "form.get('password').invalid">Este campo es requerido.</mat-error>
+                </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <button [disabled]="form.invalid" mat-raised-button color="primary"  type="submit">Sign In</button>
+            <div class="container-signIn">
+                <fa-icon class="fab fa-github"></fa-icon>
+                <button mat-button class="github-button" (click)="signInGitHub()" type="button">Sign In with GitHub</button>
+            </div>
+        </mat-card-actions>
+        <a routerLink="/auth/sign_up" mat-button color="primary">Create an account</a>
+    </mat-card>
+</form>
+
+
